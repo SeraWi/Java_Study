@@ -12,7 +12,7 @@ public class BuyerMain {
 		buyer.buy(com);
 		System.out.println(buyer.money);
 		System.out.println(buyer.bonusPoint);
-
+		buyer.summary();
 	}
 
 }

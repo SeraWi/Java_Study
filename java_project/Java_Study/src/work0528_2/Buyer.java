@@ -25,5 +25,23 @@ public class Buyer {
 		cnt++;
 		System.out.println(p +"를 구매 하였습니다.");
 	}
-	
+	void summary() {
+		//구매 상품 리스트, 구매 금액의 총합 출력
+		int sum = 0;
+		int bonusPoint =0;
+		String itemList ="";
+		
+		for( int i= 0; i < cnt; i++) {
+			sum+= item[i].price;
+			bonusPoint += item[i].bonusPoint;
+			itemList +=item[i]+",";
+		}
+		System.out.println("구매하신 제품은"+itemList+ " 입니다.");
+		System.out.println("구매하신 제품의 총 금액은 "+ sum+ "원 입니다.");
+		System.out.println("구매하신 제품의 적립 포인트는 "+ bonusPoint+ "점 입니다.");
+	}
 }
+
+
+
+
