@@ -27,16 +27,23 @@ public class StudentHandler {
 	}
 	public void totalScore() {
 		for( int i = 0; i< numOfStudent ; i++) {
-			students[i].totalScore();
+			System.out.println(students[i].name+"의 총점은"+ students[i].totalScore() +"입니다.");
 			System.out.println("===================");
 		}
 		System.out.println();
 	}
 	public void avgScore() {
 		for( int i= 0;i < numOfStudent; i++) {
-			students[i].avgScore();
+			System.out.println(students[i].name+"의 평균은"+ students[i].avgScore() +"입니다.");
 			System.out.println("===================");
 		}
 		System.out.println();
+	}
+	public void showAllData() {
+		for( int i = 0; i< numOfStudent; i++) {
+			students[i].showAllData();
+			System.err.println("=====================");
+		}
+		
 	}
 }

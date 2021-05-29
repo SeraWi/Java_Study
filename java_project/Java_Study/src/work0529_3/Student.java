@@ -13,13 +13,15 @@ public class Student {
 		this.eng = eng;
 		this.math = math;
 	}
-	public void totalScore() {
-		System.out.println(name+"의 총점은 "+ kor+eng+math+" 점 입니다.");
+	public int totalScore() {
+		return kor + eng + math ;
 	}
-	public void avgScore() {
-		System.out.println(name+"의 평균은 "+(float)((kor+eng+math)/3)+" 점 입니다.");
+	public float avgScore() {
+		return (float)((kor+eng+math)/3);
 	}
 	public void showAllData() {
-		System.out.println("이  름: "+ );
+		System.out.println("이  름: "+ name);
+		System.out.println("총  점: "+ totalScore());
+		System.out.println("평  균: "+ avgScore());
 	}
 }
