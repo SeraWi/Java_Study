@@ -19,4 +19,7 @@ public class Student {
 	public void avgScore() {
 		System.out.println(name+"의 평균은 "+(float)((kor+eng+math)/3)+" 점 입니다.");
 	}
+	public void showAllData() {
+		System.out.println("이  름: "+ );
+	}
 }
