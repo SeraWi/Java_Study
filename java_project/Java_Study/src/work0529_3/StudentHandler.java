@@ -21,9 +21,9 @@ public class StudentHandler {
 		int eng = Integer.parseInt(scanner.nextLine());
 		System.out.print("수학 성적을 입력해주세요 > ");
 		int math = Integer.parseInt(scanner.nextLine());
-		System.out.println("학생 성적이 저장되었습니다. > ");
 		
 		students[numOfStudent++] = new Student(name, kor, eng, math);
+		System.out.println("학생 성적이 저장되었습니다. > ");
 	}
 	public void totalScore() {
 		for( int i = 0; i< numOfStudent ; i++) {
