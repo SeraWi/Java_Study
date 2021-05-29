@@ -23,7 +23,7 @@ public class StudentHandler {
 		int math = Integer.parseInt(scanner.nextLine());
 
 		students[numOfStudent++] = new Student(name,kor,eng,math);
-		System.out.println("학생 성적이 저장되었습니다. > ");
+		System.out.println("학생 성적이 저장되었습니다. ");
 	}
 	public void totalScore() {
 		if( numOfStudent > 0) {

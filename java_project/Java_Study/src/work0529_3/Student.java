@@ -17,7 +17,7 @@ public class Student {
 		return kor + eng + math ;
 	}
 	public float avgScore() {
-		return (float)((kor+eng+math)/3);
+		return (kor+eng+math)/3.0f;
 	}
 	public void showAllData() {
 		System.out.println("이  름: "+ name);
