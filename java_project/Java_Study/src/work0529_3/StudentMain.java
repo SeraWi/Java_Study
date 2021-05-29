@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class StudentMain {
 	public static void main(String[] args) {
 		StudentHandler sh = new StudentHandler(10);
+		
 		for(;;) {
 			Scanner scanner= new Scanner(System.in);
 			System.out.println("-------메뉴---------");

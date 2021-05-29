@@ -7,8 +7,8 @@ public class StudentHandler {
 	int numOfStudent;
 	
 	StudentHandler(int num){
-		Student[] students = new Student[num];
-		int numOfStudent = 0;
+		this. students = new Student[num];
+		this.numOfStudent  = 0;
 	}
 	
 	public void addStudent() {
@@ -22,7 +22,7 @@ public class StudentHandler {
 		System.out.print("수학 성적을 입력해주세요 > ");
 		int math = Integer.parseInt(scanner.nextLine());
 		
-		students[numOfStudent++] = new Student(name, kor, eng, math);
+		students[numOfStudent++] = new Student(name,kor,eng,math);
 		System.out.println("학생 성적이 저장되었습니다. > ");
 	}
 	public void totalScore() {
@@ -42,7 +42,7 @@ public class StudentHandler {
 	public void showAllData() {
 		for( int i = 0; i< numOfStudent; i++) {
 			students[i].showAllData();
-			System.err.println("=====================");
+			System.out.println("=====================");
 		}
 		
 	}
