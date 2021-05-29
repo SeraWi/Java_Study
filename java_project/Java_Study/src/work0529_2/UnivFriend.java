@@ -4,7 +4,7 @@ package work0529_2;
 public class UnivFriend extends Friend {
 	
 	String major;
-	public UnivFriend(String name, String phoneNumber, String address) {
+	public UnivFriend(String name, String phoneNumber, String address,String major) {
 		super(name, phoneNumber, address);
 		this.major = major;
 	}
