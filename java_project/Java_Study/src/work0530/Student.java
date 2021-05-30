@@ -25,4 +25,7 @@ public class Student {
 		System.out.println("국영수 총점: "+totalScore());
 		System.out.println("국영수 평균: "+ avgScore());
 	}
+	void showAllInfo() {
+		
+	}
 }
