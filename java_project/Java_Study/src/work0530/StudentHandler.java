@@ -41,4 +41,10 @@ public class StudentHandler {
 	public void addStudentarray(Student s) {
 		students[numOfStudent++] = s;
 	}
+	public void showBasicInfo() {
+		for(int i = 0; i< numOfStudent ; i++) {
+			students[i].showBasicInfo();
+			System.out.println("=========================");
+		}
+	}
 }

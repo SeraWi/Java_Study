@@ -17,9 +17,13 @@ public class LiberalStudent extends Student{
 	@Override
 	void showBasicInfo() {
 		super.showBasicInfo();
+	}
+	void showAllInfo() {
+		showBasicInfo();
 		System.out.println("제 2외국어 성적: " + sec);
 		System.out.println("국영수외 총점: "+this.totalScore());
 		System.out.println("국영수외 평균:"+ this.avgScore());
 	}
-
 }
+
+
