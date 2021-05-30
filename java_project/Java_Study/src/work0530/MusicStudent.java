@@ -6,7 +6,7 @@ public class MusicStudent extends Student{
 		super(name, kor, eng, math);
 		this.music = music;
 	}
-	
+
 	@Override
 	int totalScore() {
 		return super.totalScore()+music;
@@ -18,6 +18,9 @@ public class MusicStudent extends Student{
 	@Override
 	void showBasicInfo() {
 		super.showBasicInfo();
+	}
+	void showAllInfo() {
+		showBasicInfo();
 		System.out.println("음악 성적: "+music);
 		System.out.println("국영수음 총점: "+this.totalScore());
 		System.out.println("국영수음 평균: "+this.avgScore());
