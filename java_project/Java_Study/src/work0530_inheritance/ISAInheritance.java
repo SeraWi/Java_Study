@@ -8,5 +8,4 @@ public class ISAInheritance {
 		nc.movingCal();
 		tn.write("ISE-241-242");
 	}
-
 }
