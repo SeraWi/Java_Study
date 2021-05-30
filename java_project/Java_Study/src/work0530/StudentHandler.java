@@ -18,9 +18,9 @@ public class StudentHandler {
 		String name = scanner.nextLine();
 		System.out.print("국어 성적을 입력해주세요 >");
 		int kor = Integer.parseInt(scanner.nextLine());
-		System.out.println("영어 성적을 입력해주세요 >");
+		System.out.print("영어 성적을 입력해주세요 >");
 		int eng = Integer.parseInt(scanner.nextLine());
-		System.out.println("수학 성적을 입력해주세요 >");
+		System.out.print("수학 성적을 입력해주세요 >");
 		int math = Integer.parseInt(scanner.nextLine());
 
 		if( choice == 1) {
@@ -28,11 +28,11 @@ public class StudentHandler {
 			int sci = Integer.parseInt(scanner.nextLine());
 			addStudentarray(new ScienceStudent(name, kor, eng, math,sci));
 		}else if( choice ==2 ) {
-			System.out.println("제2외국어 성적을 입력해주세요 > ");
+			System.out.print("제2외국어 성적을 입력해주세요 > ");
 			int sec = Integer.parseInt(scanner.nextLine());
 			addStudentarray(new LiberalStudent(name, kor, eng, math, sec));
 		}else {
-			System.out.println("음악 성적을 입력해주세요 >");
+			System.out.print("음악 성적을 입력해주세요 >");
 			int music = Integer.parseInt(scanner.nextLine());
 			addStudentarray(new MusicStudent(name, kor, eng, math, music));
 		}
