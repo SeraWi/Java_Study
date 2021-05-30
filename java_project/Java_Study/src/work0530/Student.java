@@ -22,7 +22,7 @@ public class Student {
 		System.out.println("국어성적:"+kor);
 		System.out.println("영어성적: "+eng);
 		System.out.println("수학성적: "+math);
-		System.out.println("총   점: "+totalScore());
-		System.out.println("평   균: "+ avgScore());
+		System.out.println("국영수 총점: "+totalScore());
+		System.out.println("국영수 평균: "+ avgScore());
 	}
 }
