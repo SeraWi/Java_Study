@@ -21,7 +21,7 @@ public class ScienceStudent extends Student {
 	void showAllInfo() {
 		showBasicInfo();
 		System.out.println("과학 성적: "+ sci);
-		System.out.println("국영수과총점"+ this.totalScore());
+		System.out.println("국영수과 총점:"+ this.totalScore());
 		System.out.println("국영수과 평균: "+this.avgScore());
 	}
 
