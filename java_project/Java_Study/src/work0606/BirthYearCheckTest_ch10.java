@@ -2,7 +2,7 @@ package work0606;
 
 import java.util.Scanner;
 
-public class BirthYearCheckTest {
+public class BirthYearCheckTest_ch10 {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
