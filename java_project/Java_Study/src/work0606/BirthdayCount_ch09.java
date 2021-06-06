@@ -3,7 +3,7 @@ package work0606;
 import java.util.Calendar;
 import java.util.Scanner;
 
-public class AgeTest {
+public class BirthdayCount_ch09 {
 	//4.자신의 생일을 기준으로 오늘까지 몇 일을 살았는지 출력하는 프로그램을 만들어봅시다.
 	public static void main(String[] args) {
 		

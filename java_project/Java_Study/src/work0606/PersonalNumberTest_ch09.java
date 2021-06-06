@@ -6,8 +6,10 @@ public class PersonalNumberTest_ch09 {
 		
 		Person p1 = new Person("손흥민", "1111-11111");
 		Person p2 = new Person("이수지", "1111-11111");
+		Person p3 = new Person("이수지", "1111-11110");
 		
 		System.out.println(p1.equals(p2));
+		System.out.println(p1.equals(p3));
 		
 	}
 }
@@ -26,7 +28,7 @@ class Person {
 		
 		if(!(obj == null) && obj instanceof Person) {
 			Person p = (Person)obj;
-			if(this.personNumber == p.personNumber) {
+			if(this.personNumber.equals(p.personNumber) ) {
 				result = true;
 			}
 		}
