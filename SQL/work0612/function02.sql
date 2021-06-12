@@ -61,4 +61,37 @@ from dept;
 --30,SALES
 --40,OPERATIONS
 
+select ename, deptno,
+      decode(deptno, 10, 'ACCOUNTING',
+                     20, 'RESEARCH',
+                     30, 'SALES',
+                     40,'OPERATIONS'
+                     ) as DNAME
+from emp
+order by dname;
 
+--직급에 따라 급여를 인상하도록 하자
+--지급이 'ANALYST'인 사원은 5%인상, 
+--'SALESMAN'인 사원은 10%, 
+--'MANAGER'인 사원은 15%,
+--'CLERK'인 사원원은 20%
+
+select ename, job, sal, 
+    decode(job,'ANALYST', sal*1.05,
+               'SALESMAN',sal*1.1,
+               'MANAGER',sal*1.15,
+               'CLERK',sal*1.2
+               ) as upsal
+from emp
+order by job;
+
+-- case함수도 분기할 때 사용
+-- case when 조건식 then참일 때 값
+select ename, deptno,
+        case when deptno = 10 then 'ACCOUNTING'
+            when deptno = 20 then 'RESEARCH'
+            when deptno = 30 then 'SALES'
+            when deptno = 40 then 'OPERATION'
+            END as deptname
+from emp
+order by deptname desc;
