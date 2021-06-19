@@ -128,11 +128,83 @@ public class DeptDao {
 		
 		return result;
 	}
+
 	
+	// 3. Dept 테이블의 데이터 수정 메소드
+	// 반영된 행의 개수 반환
+	// 사용자로 부터 데이터를 받아서 처리 ->dept 객체
+	
+	int editDept(Connection conn, Dept dept) {
+		int result = 0;
+		
+		// 전달 받은 dept객체의 데이터로 dept테이블에 저장 ->결과 값을 반환
+		PreparedStatement pstmt = null;
+		
+		try {
 
+			//sql 작성
+			String sql = "update dept set dname =?, loc=? where deptno =?";
+			//객체 생성
+			pstmt = conn.prepareStatement(sql);
+			//세팅
+			pstmt.setString(1, dept.getDname());
+			pstmt.setString(2, dept.getLoc());
+			pstmt.setInt(3, dept.getDeptno());
+			
+			//실행
+			result = pstmt.executeUpdate(); //실행 횟수로 int 반환
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			if(pstmt != null) {
+				try {
+					pstmt.close();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+		
+	
+		
+		return result;
+	}
 
-
-
-
+	// 4. dept 테이블의 데이터를 삭제
+	// 삭제된 행의 개수를 반환
+	// 사용자로부터 deptno를 받아서 처리한다.
+	
+	int deleteDept(Connection conn, int deptno) {
+		int result = 0;
+		
+		PreparedStatement pstmt = null;
+		
+		
+		try {
+			String sql = "delete from dept where deptno =?";
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, deptno);
+			
+			result = pstmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			if(pstmt != null) {
+				try {
+					pstmt.close();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+		
+		return result;
+	}
 
 }
