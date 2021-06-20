@@ -1,5 +1,5 @@
 --2021/06/20
---VIEW 복습
+--VIEW, SEQUENCE, INDEX 복습
 
 --자주 사용되는
 --30번 부서에 소속된 사원들의 사번과 이름과 부서번호를 출력하기 위한 
@@ -62,3 +62,27 @@ increment by 10;
 --insert
 insert into dept01 values(dept_deptno_seq.nextval, 'dev','seoul');
 select * from dept01;
+--------------------------------------------------------------------------------
+--index
+--검색을 빠르게 하기위한 객체
+--물리적인  저장 공간이 필요
+--생성할 때 시간 필요
+-- 많은 인덱스는 DML작업이 많은 경우 성능 저하 발생!!
+
+drop table emp01;
+
+create table emp01
+as select * from emp;
+
+insert into emp01 select * from emp01;
+
+insert into emp01(empno, ename) values(7777,'KING');
+insert into emp01(empno, ename) values(7777,'SON');
+
+select * from emp01 where ename = 'SON';
+
+-- emp01테이블에 ename 컬럼을 index로 설정
+create index index_emp01_ename
+on emp01(ename);
+
+drop table emp01;
