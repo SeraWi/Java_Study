@@ -75,6 +75,17 @@ where ename ='SCOTT';
 
 select *from emp01;
 
+select *from emp01;
+-- 사원 테이블에서 부서명이 sales인 사원을 모두 삭제하기
+select * from emp01;
+delete from emp01
+where deptno = (select deptno from dept where dname ='SALES');
+
+drop table emp01;
+drop table dept01;
+drop table dept02;
+drop table dept03;
+drop table emp02;
 
 
 
