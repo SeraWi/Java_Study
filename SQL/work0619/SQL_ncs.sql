@@ -3,24 +3,24 @@
 
 --#1 아래 요구사항에 맞도록 기본 SQL 문을 작성하시오.
 --1. 아래 조건에 맞는 DDL을 작성하시오.
-
-create table CONTACT(
+drop table contact;
+create table contact(
     pIdx number(6) constraint contract_pIdx_pk primary key,
     name varchar2(20) not null,
     phoneNum varchar2(20) not null,
-    address varchar2(30) default 'KOREA, SEOUL',
+    address varchar2(30) default 'KOREA',
     email varchar2(30)  default '미지정',
-    friendType varchar2(5) not null constraint contract_ftype_ck check( friendType in ('univ','com','cafe'),
+    friendType varchar2(4) not null constraint contract_ftype_ck check( friendType in ('univ','com','cafe')),
     
--- 선택 정보
     major varchar2(10), 
     grade number(1), 
-    comName varchar2(10),
-    deptName varchar2(10),
-    job varchar(10),
+    comName varchar2(20),
+    deptName varchar2(20),
+    position varchar(10),
     meetingName varchar2(10), 
     nickName varchar2(10)
 );
+
 
 select * from dept;
 --2. DEPT 테이블에 데이터를 삽입하는 SQL을 작성하시오. 입력 데이터는 임의로 작성하시오.
@@ -39,7 +39,9 @@ select * from tab;
 --6. EMP 테이블의 구조를 확인하는 SQL을 작성하시오.
 desc emp;
 --7. 사용자가 정의한 제약조건들을 확인하는 SQL문을 작성하시오.
-
+select *
+from user_constraints
+where table_name ='테이블명';
 
 --#2 아래 요구사항에 맞도록 고급 SQL 문을 작성하시오.
 
