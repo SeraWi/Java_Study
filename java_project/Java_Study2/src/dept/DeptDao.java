@@ -100,7 +100,7 @@ public class DeptDao {
 		
 		try {
 			//Sql작성
-			String sql = "insert into dept values(dept01_deptno_seq.nextval, ?, ?)";
+			String sql = "insert into dept values(dept01_Deptno_seq.nextval, ?, ?)";
 			//객체 생성
 			pstmt = conn.prepareStatement(sql);
 			//세팅하기
