@@ -13,6 +13,7 @@ public class Dept {
 		this.dname = dname;
 		this.loc = loc;
 	}
+	
 
 	//Getter, Setter
 	

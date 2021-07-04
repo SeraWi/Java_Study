@@ -1,0 +1,22 @@
+도서 관리 프로그램
+1. book - 데이터를 저장하는 클래스 value object
+	변수 : bookid, bookname, publisher, price (private)
+	생성자
+	getter, setter
+	toString override
+
+2. bookDao : 싱글톤으로 만든다. 
+	Book 객체를 List로 받는다
+	1) 도서 리스트   Read : Select
+	2) 도서 입력 Create : Insert
+	3) 도서 수정 Update : Update
+	4) 도서 삭제 DELETE : DELETE
+
+3. bookManager
+	1) 도서 리스트 출력 : ArrayList ->for each
+	2) 도서 입력  ->사용자에게 입력할 도서 받기 (scanner)->입력 완료 혹은 실패 
+	3) 도서 수정 -> 사용자에게 수정할 도서 받기(scanner) -> 수정 완료 혹은 실패
+	3) 도서 삭제 -> 도서 리스트 보여주기 -> 사용자에게 삭제할 도서의  bookid 받기-> 삭제 완료 혹은 실패
+
+4. UI : 1. 도서 리스트 2. 도서 입력 3. 도서 수정 4. 도서 삭제 5. 종료- > 무한반복 시키기
+        
