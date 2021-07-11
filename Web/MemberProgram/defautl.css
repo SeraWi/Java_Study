@@ -1,0 +1,129 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Gothic:wght@700&family=Sunflower:wght@500&display=swap');
+
+ 
+/* 나눔 고딕, 주아, 선플라워 
+font-family: 'Jua', sans-serif;
+font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Sunflower', sans-serif;
+ */
+
+
+ /* 기본설정 */
+ *{
+     margin:0;
+     padding:0;
+ }
+
+ .title_font{
+    font-family: 'Nanum Gothic', sans-serif; 
+    font-weight: bold;
+ }
+
+/* header 설정 */
+ header{
+     padding: 20px;
+     border-bottom: 1px solid #aaa;
+ }
+
+ /* 회원등록 폼 설정 */
+ #regFormArea{
+     padding: 20px;
+     border-bottom: 1px solid #aaa;
+ }
+
+ #regForm> table  td{
+    width: 200px;
+    padding: 5px;
+ }
+
+ #regForm> table label{
+     display:block;
+ }
+
+/* 등록 submit */
+#regForm input[type =submit],#editForm input[type=submit]{
+    height: 45px;
+    width: 100px;
+
+    border: 1px solid #aaa;
+    background-color:cornflowerblue;
+
+    font-size:1.2em;
+    color:white;
+
+}
+
+/* input text 설정 */
+#regForm input[type=text]{
+    height: 30px;
+    width: 200px;
+
+    /* padding좌우만 */
+    padding: 0 5px;
+   
+}
+
+/* 회원리스트 영역 */
+#listArea{
+    padding: 20px 40px;
+    border-bottom: 1px solid #aaa;
+}
+
+#listArea>table{
+    margin: 10px 0;
+
+    width: 60%;
+    border-collapse:collapse;
+}
+
+
+/* th: 컬럼명들 td:밑에 생기는 정보들 */
+#listArea>table td, #listArea>table th{
+    padding: 10px;
+    border: 1px solid #aaa;
+
+    text-align: center;
+}
+
+/* ---------------------------------------------------------------- */
+#editFormArea{
+    width: 350px;
+    border:1px solid #aaa;
+    border-radius: 10px;
+
+    background-color:cornsilk;
+
+    padding:20px;
+
+    position:absolute;
+    left:50%;
+    top:100px;
+    margin-left:-157px;
+
+   display:none;
+
+
+}
+#div_header{
+    border-bottom:1px solid #aaa;
+    overflow:hidden;
+}
+
+#div_header>h2{
+    float:left;
+    padding-bottom: 5px;
+}
+#div_header>div{
+    float:right;
+}
+
+#editFormArea>table{
+    width: 100%;
+    margin-top:15px;
+}
+
+#editForm>table td{
+    padding: 5px 10px;
+    text-align: center;
+}
