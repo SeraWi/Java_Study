@@ -1,5 +1,3 @@
-# Self_Study
-
-learning Java, SQL
-
-upload Java excercises
+## 📙 Self_Study
+upload excercises <br>
+Java, SQl, Web
